@@ -1,0 +1,229 @@
+main .success-message h1, main .container .content h1, main .success-message .content h1 {
+  font-size: 55px;
+  margin-bottom: 25px;
+  font-weight: 700;
+}
+
+main .success-message button, main .container .content form input[type=submit], main .success-message .content form input[type=submit] {
+  width: 100%;
+  padding: 15px;
+  border-radius: 8px;
+  border: none;
+  background-color: hsl(234, 29%, 20%);
+  color: hsl(0, 0%, 100%);
+  cursor: pointer;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+main .success-message button:hover, main .container .content form input[type=submit]:hover, main .success-message .content form input[type=submit]:hover {
+  background-color: hsl(4, 100%, 67%);
+  -webkit-box-shadow: 0px 3px 6px 3px rgba(0, 0, 0, 0.0196078431), 0px 3px 7px 1px hsla(4, 100%, 67%, 0.76);
+          box-shadow: 0px 3px 6px 3px rgba(0, 0, 0, 0.0196078431), 0px 3px 7px 1px hsla(4, 100%, 67%, 0.76);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+main {
+  height: 100vh;
+  background-color: hsl(234, 29%, 20%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media (max-width: 680px) {
+  main {
+    background-color: hsl(0, 0%, 100%);
+  }
+}
+main .container, main .success-message {
+  background-color: hsl(0, 0%, 100%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 900px;
+  padding: 25px;
+  border-radius: 25px;
+}
+@media (max-width: 992px) {
+  main .container, main .success-message {
+    width: 90%;
+  }
+  main .container .content, main .success-message .content {
+    width: 48% !important;
+  }
+  main .container .content h1, main .success-message .content h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+  main .container .content ul, main .success-message .content ul {
+    margin-bottom: 20px;
+  }
+  main .container .image, main .success-message .image {
+    width: 48% !important;
+  }
+  main .container .image img, main .success-message .image img {
+    width: 100%;
+    height: 100%;
+  }
+}
+@media (max-width: 680px) {
+  main .container, main .success-message {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    width: 100%;
+    padding: 0;
+  }
+  main .container .content, main .success-message .content {
+    width: 100% !important;
+  }
+  main .container .content h1, main .success-message .content h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+  main .container .content ul, main .success-message .content ul {
+    margin-bottom: 20px;
+  }
+  main .container .image, main .success-message .image {
+    width: 100% !important;
+    margin-top: -70px;
+  }
+}
+main .container .content, main .success-message .content {
+  width: 48%;
+  padding: 20px;
+}
+main .container .content p, main .success-message .content p {
+  margin-bottom: 35px;
+}
+main .container .content ul, main .success-message .content ul {
+  margin-left: 10px;
+  margin-bottom: 40px;
+}
+main .container .content ul li, main .success-message .content ul li {
+  width: 100%;
+  list-style: none;
+  margin-left: 10px;
+  margin-bottom: 15px;
+  position: relative;
+  padding-left: 35px;
+}
+main .container .content ul li::before, main .success-message .content ul li::before {
+  content: url("../assets/images/icon-list.svg");
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+main .container .content form, main .success-message .content form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+main .container .content form label, main .success-message .content form label {
+  margin-bottom: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+main .container .content form label .invalid, main .success-message .content form label .invalid {
+  color: hsl(4, 100%, 67%);
+  display: none;
+}
+main .container .content form input[type=email], main .success-message .content form input[type=email] {
+  width: 100%;
+  padding: 15px;
+  border-radius: 8px;
+  border: none;
+  border: 1px solid hsl(231, 7%, 60%);
+  margin-bottom: 25px;
+}
+main .container .content form input[type=email]:focus, main .success-message .content form input[type=email]:focus {
+  border: none;
+  border: 1px solid black;
+}
+main .container .content form input[type=email].notValid, main .success-message .content form input[type=email].notValid {
+  border-color: hsl(4, 100%, 67%);
+  color: hsl(4, 100%, 67%);
+  background-color: hsla(4, 100%, 67%, 0.28) !important;
+}
+main .container .image, main .success-message .image {
+  width: 48%;
+}
+main .success-message {
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  width: 480px;
+  padding: 50px;
+}
+@media (max-width: 680px) {
+  main .success-message {
+    width: 100% !important;
+    height: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    position: relative;
+  }
+  main .success-message h1 {
+    font-size: 40px;
+  }
+  main .success-message button {
+    position: absolute;
+    bottom: 30px;
+    width: 80%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+}
+main .success-message img {
+  margin-bottom: 50px;
+}
+main .success-message h1 {
+  line-height: 1;
+}
+main .success-message p {
+  margin-bottom: 20px;
+  line-height: 1.3;
+}
+main .success-message p span {
+  font-weight: 700;
+}
